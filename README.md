@@ -6,8 +6,8 @@ Sisqo is a library for automating the management of Cisco devices via SSH.
 
 #### Features
 
- * Runs on any UNIX-style platform that has vty support, with no dependencies on OpenSSH or SSH agents
- * Emulates OpenSSH-style `ProxyCommand` support, allowing the library to traverse jumpboxes
+ * Runs on any UNIX-style platform that has vty support, ~~with no dependencies on OpenSSH or SSH agents~~
+ * OpenSSH-style `ProxyCommand` support, allowing the library to traverse jumpboxes
  * Supports SSH pubkey authentication with no dependency on the user's `.ssh` profile, complimenting the `ProxyCommand` feature by attempting both password-based and pubkey-based authentication at each hop
  * Complete support for VT100 series terminal emulation, guaranteeing that what you see on the command line will also be what you receive from this library
  * Automatically handles Cisco-style "more" pagination and prompt matching, allowing for seamless `read()`/`write()` semantics regardless of the target device's terminal settings
