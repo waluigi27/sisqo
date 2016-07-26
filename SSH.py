@@ -112,7 +112,7 @@ class SSH:
 
         self._readSinceWrite = None
 
-    def authenticate(self, username, password=None, privateKeyFile=None, privateKeyPassword=None):
+    def authenticate(self, username, password=None, privateKeyFile=None, privateKeyPassword=None, key_filename=None):
         """
         :type username: str
         :type password: str|None
@@ -163,7 +163,8 @@ class SSH:
                 compress=False,
                 username=username,
                 password=password,
-                pkey=pkey )
+                pkey=pkey
+                key_filename=key_filename )
 
             self._log.info('Creating a vt100 512x64 shell')
 
